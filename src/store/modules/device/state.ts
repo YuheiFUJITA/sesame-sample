@@ -6,5 +6,5 @@ export const state: StateInterface = {
     batteryPercentage: null,
     position: null,
     CHSesame2Status: null,
-    timestampe: null,
+    timestamp: null,
 };

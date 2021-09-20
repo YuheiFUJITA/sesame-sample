@@ -4,7 +4,7 @@ export interface StateInterface {
     batteryVoltage: number | null;
     position: number | null;
     CHSesame2Status: 'locked' | 'unlocked' | 'moved' | null;
-    timestampe: Date | null;
+    timestamp: Date | null;
 }
 
 export interface GettersInterface {
@@ -13,7 +13,7 @@ export interface GettersInterface {
     batteryVoltage: StateInterface['batteryVoltage'];
     position: StateInterface['position'];
     CHSesame2Status: StateInterface['CHSesame2Status'];
-    timestampe: StateInterface['timestampe'];
+    timestamp: StateInterface['timestamp'];
 }
 
 export interface RootGettersInterface {
@@ -22,7 +22,7 @@ export interface RootGettersInterface {
     'device/batteryVoltage': GettersInterface['batteryVoltage'];
     'device/position': GettersInterface['position'];
     'device/CHSesame2Status': GettersInterface['CHSesame2Status'];
-    'device/timestampe': GettersInterface['timestampe'];
+    'device/timestamp': GettersInterface['timestamp'];
 }
 
 export interface MutationsInterface {
@@ -31,7 +31,7 @@ export interface MutationsInterface {
     setBatteryVoltage: NonNullable<StateInterface['batteryVoltage']>;
     setPosition: NonNullable<StateInterface['position']>;
     setCHSesame2Status: NonNullable<StateInterface['CHSesame2Status']>;
-    setTimestamp: NonNullable<StateInterface['timestampe']>;
+    setTimestamp: NonNullable<StateInterface['timestamp']>;
     setAll: StateInterface;
     reset: void;
 }

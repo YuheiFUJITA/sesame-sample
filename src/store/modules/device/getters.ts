@@ -17,7 +17,7 @@ export const getters: Getters<StateInterface, GettersInterface> = {
     CHSesame2Status(state) {
         return state.CHSesame2Status;
     },
-    timestampe(state) {
-        return state.timestampe;
+    timestamp(state) {
+        return state.timestamp;
     },
 };

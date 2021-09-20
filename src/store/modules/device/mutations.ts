@@ -18,7 +18,7 @@ export const mutations: Mutations<StateInterface, MutationsInterface> = {
         state.CHSesame2Status = payload;
     },
     setTimestamp(state, payload) {
-        state.timestampe = payload;
+        state.timestamp = payload;
     },
     setAll(state, payload) {
         state = payload;
@@ -31,7 +31,7 @@ export const mutations: Mutations<StateInterface, MutationsInterface> = {
             batteryVoltage: null,
             position: null,
             CHSesame2Status: null,
-            timestampe: null,
+            timestamp: null,
         };
     },
 };
