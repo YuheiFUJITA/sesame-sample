@@ -12,13 +12,7 @@ export const actions: Actions<
     GettersInterface,
     MutationsInterface
 > = {
-    asyncGetDeviceStatus(ctx, payload) {
+    asyncGetDeviceStatus(ctx) {
         ctx.commit('setAll');
-    },
-    asyncUpdateDeviceStatus(ctx) {
-        ctx.commit('setAll');
-    },
-    asyncDeleteDeviceStatus(ctx) {
-        ctx.commit('reset');
     },
 };

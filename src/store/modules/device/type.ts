@@ -49,12 +49,8 @@ export interface RootMutationsInterface {
 
 export interface ActionsInterface {
     asyncGetDeviceStatus: string;
-    asyncUpdateDeviceStatus: void;
-    asyncDeleteDeviceStatus: void;
 }
 
 export interface RootActionsInterface {
     'device/asyncGetDeviceStatus': ActionsInterface['asyncGetDeviceStatus'];
-    'device/asyncUpdateDeviceStatus': ActionsInterface['asyncUpdateDeviceStatus'];
-    'device/asyncDeleteDeviceStatus': ActionsInterface['asyncDeleteDeviceStatus'];
 }
