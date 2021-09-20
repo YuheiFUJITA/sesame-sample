@@ -27,6 +27,5 @@ export const actions: Actions<
     },
     asyncCloseSnackbar(ctx) {
         ctx.commit('setSnackbarText', null);
-        ctx.commit('setSnackbarColor', 'info');
     },
 };
