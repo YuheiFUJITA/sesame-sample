@@ -1,5 +1,5 @@
 export interface StateInterface {
-    apiKey: string | null;
+    apiKey: string;
     isLoading: boolean;
     snackbarText: string | null;
     snackbarColor: 'info' | 'warning';

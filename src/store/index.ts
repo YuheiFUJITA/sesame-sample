@@ -34,6 +34,7 @@ export default new Vuex.Store({
                 setItem: (key, value) => secureStorage.set(key, value),
                 removeItem: (key) => secureStorage.remove(key),
             },
+            paths: ['system'],
         }),
     ],
 });

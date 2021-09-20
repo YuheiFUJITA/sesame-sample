@@ -37,6 +37,7 @@ export interface MutationsInterface {
 }
 
 export interface RootMutationsInterface {
+    'device/setUuid': MutationsInterface['setUuid'];
     'device/setBatteryPercentage': MutationsInterface['setBatteryPercentage'];
     'device/setBatteryVoltage': MutationsInterface['setBatteryVoltage'];
     'device/setPosition': MutationsInterface['setPosition'];

@@ -1,7 +1,7 @@
 import { StateInterface } from './type';
 
 export const state: StateInterface = {
-    uuid: null,
+    uuid: '',
     batteryVoltage: null,
     batteryPercentage: null,
     position: null,

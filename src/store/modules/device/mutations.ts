@@ -3,22 +3,22 @@ import { MutationsInterface, StateInterface } from './type';
 
 export const mutations: Mutations<StateInterface, MutationsInterface> = {
     setUuid(state, payload) {
-        state = { ...state, uuid: payload };
+        state.uuid = payload;
     },
     setBatteryPercentage(state, payload) {
-        state = { ...state, batteryPercentage: payload };
+        state.batteryPercentage = payload;
     },
     setBatteryVoltage(state, payload) {
-        state = { ...state, batteryVoltage: payload };
+        state.batteryVoltage = payload;
     },
     setPosition(state, payload) {
-        state = { ...state, position: payload };
+        state.position = payload;
     },
     setCHSesame2Status(state, payload) {
-        state = { ...state, CHSesame2Status: payload };
+        state.CHSesame2Status = payload;
     },
     setTimestamp(state, payload) {
-        state = { ...state, timestampe: payload };
+        state.timestampe = payload;
     },
     setAll(state, payload) {
         state = payload;
