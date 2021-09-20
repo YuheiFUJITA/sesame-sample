@@ -24,6 +24,7 @@ export const mutations: Mutations<StateInterface, MutationsInterface> = {
         state = payload;
     },
     reset(state) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         state = {
             uuid: null,
             batteryPercentage: null,

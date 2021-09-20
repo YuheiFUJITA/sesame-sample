@@ -1,5 +1,6 @@
 import 'vuex';
 import * as Device from './modules/device/type';
+import * as System from './modules/system/type';
 
 declare module 'vuex' {
     type Getters<S, G> = {
@@ -46,8 +47,12 @@ declare module 'vuex' {
 
     type RootState = {
         device: Device.StateInterface;
+        system: System.StateInterface;
     };
-    type RootGetters = Device.RootGettersInterface;
-    type RootMutations = Device.RootMutationsInterface;
-    type RootActions = Device.RootActionsInterface;
+    type RootGetters = Device.RootGettersInterface &
+        System.RootGettersInterface;
+    type RootMutations = Device.RootMutationsInterface &
+        System.RootMutationsInterface;
+    type RootActions = Device.RootActionsInterface &
+        System.RootActionsInterface;
 }
