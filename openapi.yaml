@@ -1,0 +1,68 @@
+openapi: '3.0.2'
+info:
+  title: sesame api
+  version: '1.0'
+servers:
+  - url: https://app.candyhouse.co/api/
+paths:
+  /sesame2/{uuid}:
+    get:
+      parameters:
+        - $ref: '#/components/parameters/Sesame2Uuid'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Status'
+              example:
+                batteryPercentage: 94
+                batteryVoltage: 5.869794721407625
+                position: 11
+                CHSesame2Status: locked
+                timestamp: 1598523693
+        '403':
+          description: 権限なし
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                message: Missing Authentication Token
+components:
+  schemas:
+    Status:
+      type: object
+      properties:
+        batteryPercentage:
+          type: integer
+        batteryVoltage:
+          type: number
+        position:
+          type: integer
+        CHSesame2Status:
+          type: string
+          pattern: ^(locked|unlocked|moved)$
+        timestamp:
+          type: integer
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+  parameters:
+    Sesame2Uuid:
+      name: 'uuid'
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - ApiKey: []
